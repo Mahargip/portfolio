@@ -15,6 +15,7 @@ and transformer-based AI — submitted to JOIV — adds a unique machine-learnin
 engineering background. I thrive in Agile environments, adapting quickly while staying proactive
 and self-organised.`,
   photo: "/images/profile.jpg",
+  aboutPhoto: "/images/about.jpg",
 };
 
 export const experiences = [

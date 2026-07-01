@@ -53,6 +53,10 @@
   color: var(--text-muted);
 }
 
+.avatarImg {
+  border-radius: 0;
+}
+
 .avatarGlow {
   position: absolute;
   inset: -2px;

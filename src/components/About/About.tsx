@@ -1,4 +1,5 @@
-import { FiMapPin, FiMail, FiUser } from 'react-icons/fi';
+import Image from 'next/image';
+import { FiMapPin, FiMail } from 'react-icons/fi';
 import { personal } from '@/data/portfolio';
 import styles from './About.module.css';
 
@@ -11,11 +12,13 @@ export default function About() {
           <div className={styles.avatarWrap}>
             <div className={styles.avatarGlow} />
             <div className={styles.avatarFrame}>
-              {/* Replace with <Image> when you have your photo */}
-              <div className={styles.avatarPlaceholder}>
-                <FiUser className={styles.icon} style={{ fontSize: '4rem', color: 'var(--accent-light)', opacity: 0.4 }} />
-                <p>add profile photo</p>
-              </div>
+              <Image
+                src={personal.aboutPhoto}
+                alt={personal.name}
+                fill
+                className={styles.avatarImg}
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
             </div>
             <span className={`${styles.corner} ${styles.tl}`} />
             <span className={`${styles.corner} ${styles.br}`} />
