@@ -1,0 +1,120 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition);
+}
+
+.nav.scrolled {
+  background: rgba(8, 11, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-light);
+  letter-spacing: 0.05em;
+  transition: color var(--transition);
+}
+
+.logo:hover { color: var(--text-primary); }
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+.link:hover { color: var(--text-primary); }
+.link:hover::after { width: 100%; }
+
+.cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 6px;
+  background: var(--accent-gradient);
+  color: #fff;
+  transition: opacity var(--transition), transform var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.menuBtn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+/* Mobile */
+.mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 64px;
+  background: rgba(8, 11, 16, 0.97);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.mobile.open { display: flex; }
+
+.mobileLink {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.mobileLink:hover { color: var(--accent-light); }
+
+@media (max-width: 768px) {
+  .links { display: none; }
+  .menuBtn { display: flex; }
+}
