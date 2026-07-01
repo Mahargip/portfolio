@@ -14,6 +14,7 @@ focus on real-time features, API integration, and state management. My academic 
 and transformer-based AI — submitted to JOIV — adds a unique machine-learning dimension to my
 engineering background. I thrive in Agile environments, adapting quickly while staying proactive
 and self-organised.`,
+  photo: "/images/profile.jpg",
 };
 
 export const experiences = [
