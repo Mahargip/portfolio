@@ -39,7 +39,7 @@ export default function About() {
               </div>
               <div className={styles.stat}>
                 <span className={styles.statNum}>1</span>
-                <span className={styles.statLabel}>Publication</span>
+                <span className={styles.statLabel}>Submitted Paper</span>
               </div>
             </div>
 

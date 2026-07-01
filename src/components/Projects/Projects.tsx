@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FiGithub, FiExternalLink, FiMonitor } from 'react-icons/fi';
 import { projects } from '@/data/portfolio';
 import styles from './Projects.module.css';
@@ -14,10 +15,20 @@ export default function Projects() {
             <article key={p.title} className={styles.card}>
               {/* Image */}
               <div className={styles.imageWrap}>
-                <div className={styles.placeholder}>
-                  <FiMonitor />
-                  <span>screenshot coming soon</span>
-                </div>
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    className={styles.image}
+                    style={{ objectFit: 'cover', objectPosition: 'top' }}
+                  />
+                ) : (
+                  <div className={styles.placeholder}>
+                    <FiMonitor />
+                    <span>screenshot not available</span>
+                  </div>
+                )}
               </div>
 
               {/* Body */}

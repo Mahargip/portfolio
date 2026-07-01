@@ -30,11 +30,68 @@
   pointer-events: none;
 }
 
+/* ── Two-column layout ── */
 .inner {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Photo ── */
+.photoWrapper {
+  flex-shrink: 0;
+  animation: fadeUp 0.6s ease 0.3s both;
+}
+
+.photoRing {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.25), 0 0 120px rgba(139, 92, 246, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.photoRing::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  animation: spin 12s linear infinite;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 3px solid var(--bg-primary);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Text content ── */
 .eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
@@ -208,6 +265,24 @@
 @keyframes scroll-dot {
   0% { top: 6px; opacity: 1; }
   100% { top: 18px; opacity: 0; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .inner {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 40px;
+  }
+
+  .photoWrapper {
+    align-self: center;
+  }
+
+  .photoRing {
+    width: 240px;
+    height: 240px;
+  }
 }
 
 @media (max-width: 768px) {

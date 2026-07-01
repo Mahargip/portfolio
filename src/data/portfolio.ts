@@ -7,11 +7,11 @@ export const personal = {
   phone: "+62 812-3314-4229",
   location: "Sidoarjo, Jawa Timur, Indonesia",
   linkedin: "https://www.linkedin.com/in/mahargi/",
-  github: "https://github.com/mahargi", // TODO: update to your real GitHub URL
+  github: "https://github.com/Mahargip",
   about: `I'm a Mobile Developer and Informatics Engineering student specialising in Flutter. I build
 performant, user-centric mobile applications following Clean Architecture principles, with a strong
 focus on real-time features, API integration, and state management. My academic research in NLP
-and transformer-based AI — published in JOIV — adds a unique machine-learning dimension to my
+and transformer-based AI — submitted to JOIV — adds a unique machine-learning dimension to my
 engineering background. I thrive in Agile environments, adapting quickly while staying proactive
 and self-organised.`,
 };
@@ -67,7 +67,7 @@ export const projects = [
     description:
       "Real-time industrial machine condition monitoring mobile app integrated with proprietary IoT sensors. Features live operational tracking, diagnostics, and AI-based anomaly detection for early fault identification.",
     tech: ["Flutter", "Dart", "IoT Integration", "AI Analytics", "REST API"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/aitoma.png",
     github: null as string | null,
     demo: null as string | null,
     featured: true,
@@ -77,7 +77,7 @@ export const projects = [
     description:
       "A comprehensive reusable Flutter UI component library designed to enforce design consistency and drastically accelerate future app development within the company.",
     tech: ["Flutter", "Dart", "Clean Architecture", "UI/UX Design", "Component Library"],
-    image: "/images/projects/placeholder.png",
+    image: "",
     github: null as string | null,
     demo: null as string | null,
     featured: true,
@@ -87,17 +87,17 @@ export const projects = [
     description:
       "Self-care mobile application promoting mental well-being with meditation guides, audio relaxation sessions, and a journaling system. Achieved a 25% boost in user satisfaction through iterative, feedback-driven development.",
     tech: ["Flutter", "Dart", "Firebase", "REST API", "State Management"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/laras.png",
     github: null as string | null,
     demo: null as string | null,
     featured: true,
   },
   {
-    title: "Real-Time Chat Application",
+    title: "NKRI Sambung",
     description:
-      "Full-featured chat app built with WebSockets, supporting real-time messaging, typing indicators, message delivery status, and push notifications via Firebase Cloud Messaging.",
+      "Full-featured chat app built with WebSockets and WebRTC, supporting real-time messaging, typing indicators, message delivery status, and push notifications via Firebase Cloud Messaging.",
     tech: ["Flutter", "WebSockets", "Firebase FCM", "Riverpod", "REST API"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/nkri-sambung.png",
     github: null as string | null,
     demo: null as string | null,
     featured: false,

@@ -7,7 +7,7 @@ export default function Research() {
     <section id="research" className="section" style={{ background: 'var(--bg-surface)' }}>
       <div className="container">
         <p className="section-label">Academic</p>
-        <h2 className="section-title">Research & Publication</h2>
+        <h2 className="section-title">Research</h2>
 
         <div className={styles.card}>
           <div className={styles.header}>
